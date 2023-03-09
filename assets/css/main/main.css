@@ -11,7 +11,7 @@ body { background: #F8F9FF; }
 .arrow_right_white { display: inline-block; width: 20px; height: 20px; margin-left: 8px;
     background: url("../../images/Arrow-Right-White.svg") no-repeat 50%; }
 .user {  background: url("../../images/User.svg") no-repeat 50%;}
-.email {  background: url("../../images/email.svg") no-repeat 50%;}
+.email {  background: url("../../images/Email.svg") no-repeat 50%;}
 
 .btn_box { display: flex; }
 .btn_box > a { display: inline-block; color: #009379; background: white; border: 1px solid #009379;
@@ -55,6 +55,7 @@ header  .nav_menu a:nth-child(3){ background: #009379; color: white; border-radi
     box-shadow: 34px 29px 48px rgba(51, 102, 255, 0.05); padding: 40px 30px; text-align: center; }
 .feature_wrap .card_box li .img_box { margin: 0 auto 30px auto; border-radius: 20px; width: 82px; height: 82px; padding: 20px; }
 .feature_wrap .card_box li .img_box img { width: 100%; height: 100%; object-fit: cover; }
+.feature_wrap .card_box li .img_box .img_m { display: none; }
 .feature_wrap .card_box li:nth-child(1) .img_box { background: rgba(255, 98, 80, 0.2); }
 .feature_wrap .card_box li:nth-child(2) .img_box { background: rgba(0, 147, 121, 0.2); }
 .feature_wrap .card_box li:nth-child(3) .img_box { background: rgba(248, 213, 126, 0.2) }
@@ -81,17 +82,18 @@ header  .nav_menu a:nth-child(3){ background: #009379; color: white; border-radi
 .metric_wrap .metric_group li .metric_tit { font-size: 38px; font-family: 'Poppins', sans-serif; font-weight: 700; letter-spacing: -2px; text-align: center; }
 
 .testimonial_wrap { margin: 160px 0; }
-.testimonial_wrap .card_box { display: flex; flex-flow: row; justify-content: space-between; gap: 30px; }
+.testimonial_wrap .card_box { display: flex; flex-flow: row; gap: 30px; }
 .testimonial_wrap .card_box li { border: 1px solid #D8D8D8; box-shadow: 34px 29px 48px rgba(51, 102, 255, 0.05);
-    border-radius: 20px; padding: 40px 30px; }
+    border-radius: 20px; padding: 40px 30px; background: white; }
 .testimonial_wrap .card_box li .info_group { text-align: center; margin-bottom: 30px; }
 .testimonial_wrap .card_box li .info_group .img_box { width: 56px; height: 56px; margin: 0 auto 16px auto; }
 .testimonial_wrap .card_box li .info_group .name { font-family: 'Poppins', sans-serif; font-weight: 600; color: #111827;
     font-size: 21px; margin-bottom: 6px; }
 .testimonial_wrap .card_box li .info_group .work { font-size: 14px; color: #374151; }
-.testimonial_wrap .card_box li .text_group { text-align: center; color: #2D2D2D; margin-bottom: 30px; }
+.testimonial_wrap .card_box li .text_group { text-align: center; color: #2D2D2D; display: flex; flex-flow: column; gap: 30px;  }
 .testimonial_wrap .card_box li .text_group p { line-height: 24px; }
-.testimonial_wrap .card_box li .img_box { display: flex; justify-content: center; }
+.testimonial_wrap .card_box li .text_group .img_box { display: flex; flex-flow: row; justify-content: center; gap: 5px; }
+
 
 .pricing_wrap .cord_box { display: flex; flex-flow: row; justify-content: space-between; gap: 30px; }
 .pricing_wrap .cord_box li { color: #2D2D2D; background: white; border: 1px solid #D8D8D8; padding: 40px 30px;
@@ -128,6 +130,8 @@ justify-content: center; gap: 16px; }
 .banner_wrap .ban_group .text_info .ban_sub_txt { font-size: 21px; line-height: 31px; margin-bottom: 40px; }
 .banner_wrap .ban_group .text_info .btn_box a { display: inline-flex; flex-flow: row; align-items: center; }
 .banner_wrap .ban_group .img_box { width: 50%; }
+.banner_wrap .ban_group .img_box img {  height: 100%; }
+.banner_wrap .ban_group .img_box .ban_m { display: none; }
 
 .contact_wrap { width: 100%; max-width: 1280px; padding: 0 55px; margin: 160px auto; box-sizing: border-box; }
 .contact_wrap .container { max-width: inherit; padding: 60px; border: 1px solid #D8D8D8; background: white;
@@ -156,7 +160,75 @@ justify-content: center; gap: 16px; }
 
 .footer_wrap { background: #2D2D2D; color: white; font-size: 14px; }
 .footer_wrap .container { padding: 24px 60px; display: flex; flex-flow: row; justify-content: space-between; }
-.footer_wrap p { }
 .footer_wrap .social_link { display: flex; flex-flow: row; justify-content: space-between; gap: 16px; }
 .footer_wrap .social_link a  { width: 32px; height: 32px; background: #4E4D4D; border-radius: 50%;
     display: inline-flex; align-items: center; justify-content: center; }
+
+/* ==============================================================
+   미디어쿼리 Tablet
+==============================================================*/
+@media all and (max-width:751px) {
+    header { padding: 20px 30px; align-items: center; }
+    header .nav_menu a:nth-child(2) { margin-right: 0; }
+    header .nav_menu a:nth-child(1),
+    header .nav_menu a:nth-child(3){ display: none;}
+    /* 공통*/
+    .container { padding: 0 35px; }
+    .sub_txt { margin: 20px 0 40px 0; }
+
+    /* 색션*/
+    .hero_wrap { margin-top: 100px; }
+    .hero_wrap .hero_info { flex-flow: column; }
+    .hero_wrap .hero_info .info_box { padding: 0; text-align: center; width: 100%; }
+    .hero_wrap .hero_info .btn_box  { justify-content: center; margin-bottom: 40px; }
+    .hero_wrap .hero_info .btn_box a:last-child { display: none;  }
+    .hero_wrap .hero_info .img_box { width: 320px; margin: 0 auto; }
+    .hero_wrap .logo_bar { margin: 100px 0; }
+    .hero_wrap .logo_bar .logo_img_item { width: 70px; }
+
+    .feature_wrap .card_box { flex-flow: column; gap: 20px; }
+    .feature_wrap .card_box .card_title { font-size: 21px; }
+    .feature_wrap .card_box li .img_box .img_pc { display: none; }
+    .feature_wrap .card_box li .img_box .img_m { display: block; }
+
+    .highlighted_wrap .img_box { width: 32%; }
+    .highlighted_wrap .info_box { width: calc(100% - 32%); padding: 0 0 0 20px;}
+    .highlighted_wrap .info_box .info_tit { font-size: 38px; line-height: 49px; }
+
+
+    .metric_wrap .metric_group { gap: 20px; }
+    .metric_wrap .metric_group li { padding: 30px 16px; }
+    .metric_wrap .metric_group li .metric_tit { font-size: 28px; font-weight: 600; letter-spacing: -1px; }
+
+    .testimonial_wrap { margin: 100px 0; }
+    .testimonial_wrap .card_box { flex-flow: column; }
+    .testimonial_wrap .card_box li { flex-flow: row; display: flex; align-items: center; }
+    .testimonial_wrap .card_box li .info_group,
+    .testimonial_wrap .card_box li .text_group { flex: 1; }
+    .testimonial_wrap .card_box li .info_group { margin-bottom: 0; margin-right: 30px; }
+    .testimonial_wrap .card_box li .text_group { text-align: left; align-items: self-start; gap: 24px; }
+
+    .pricing_wrap .cord_box { flex-flow: column; gap: 20px; }
+    .pricing_wrap .cord_box li .price em { display: block; }
+
+    .team_wrap .card_box { gap: 20px; }
+
+    .banner_wrap .ban_group .text_info { padding: 40px 30px;}
+    .banner_wrap .ban_group .text_info .ban_tit { font-size: 38px; line-height: 49px; }
+    .banner_wrap .ban_group .text_info .ban_sub_txt { font-size: 16px; line-height: 24px; }
+    .banner_wrap .ban_group .img_box .ban_pc { display: none; }
+    .banner_wrap .ban_group .img_box .ban_m { display: block; }
+
+    .contact_wrap { margin: 100px auto; padding: 0 35px; }
+    .contact_wrap .container { padding: 40px; flex-flow: column; }
+    .contact_wrap .info_box .text_info { margin-bottom: 40px; }
+    .contact_wrap .info_box ,
+    .contact_wrap .contact_form { width: 100%; }
+
+    .footer_wrap .container { padding: 24px 30px; }
+}
+
+/* ==============================================================
+   미디어쿼리 Mobile
+==============================================================*/
+@media all and (max-width:376px) {}
